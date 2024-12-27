@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Running Shoes Collection</title>
+    <style>
+        /* Reset and Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Arial', sans-serif;
+            font-weight: 600;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: #000000;
+            padding: 20px;
+            text-align: center;
+            color: #fff;
+        }
+
+        header h1 {
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 18px;
+            margin-top: 5px;
+        }
+
+        /* Main Content */
+        .main-content {
+            padding: 40px 10px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .product {
+            background-color: #fff;
+            width: 280px;
+            margin: 20px;
+            border-radius: 12px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .product:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 18px rgba(0, 0, 0, 0.2);
+        }
+
+        .product img {
+            width: 100%;
+            height: auto;
+            border-bottom: 2px solid #eee;
+        }
+
+        .product-info {
+            padding: 20px;
+        }
+
+        .product h3 {
+            font-size: 24px;
+            color: #1d3557;
+            margin-bottom: 15px;
+        }
+
+        .product p {
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+        .price {
+            font-size: 22px;
+            color: #e63946;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .button {
+            background-color: #000000;
+            color: #fff;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #000000;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #000000;
+            color: #fff;
+            text-align: center;
+            padding: 20px 10px;
+            margin-top: 30px;
+        }
+
+        footer p {
+            font-size: 14px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>Running Shoes Collection</h1>
+        <p>Designed for comfort, speed, and performance.</p>
+    </header>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Product 1 -->
+        <div class="product">
+            <img src="data:image/jpeg;base64,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" alt="Lightweight Running Shoes">
+            <div class="product-info">
+                <h3>Lightweight Running Shoes</h3>
+                <p>Perfect for runners who prioritize speed and agility. These shoes offer lightweight support and comfort.</p>
+                <div class="price">$79.99</div>
+                <a href="./buynow.html"><button class="button">Buy Now</button></a>
+                <a href="./add to cart.html" class="btn btn-secondary">Add to Cart</a> 
+            </div>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product">
+            <img src="data:image/jpeg;base64,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" alt="Cushioned Running Shoes">
+            <div class="product-info">
+                <h3>Cushioned Running Shoes</h3>
+                <p>Ideal for long-distance runners, providing maximum cushioning and comfort for those extra miles.</p>
+                <div class="price">$89.99</div>
+                <a href="./buynow.html"><button class="button">Buy Now</button></a>
+                <a href="./add to cart.html" class="btn btn-secondary">Add to Cart</a> 
+            </div>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJjTM-_Y6aJJo42KF1gbclUmnwnhxH1Bex6Q&s" alt="Trail Running Shoes">
+            <div class="product-info">
+                <h3>Trail Running Shoes</h3>
+                <p>Built to handle rugged terrain, these shoes provide durability and support for off-road runs.</p>
+                <div class="price">$99.99</div>
+                <a href="./buynow.html"><button class="button">Buy Now</button></a>
+                <a href="./add to cart.html" class="btn btn-secondary">Add to Cart</a> 
+            </div>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="product">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOQBfohnTppDNNgLcMuX3-RMFKH0pcUjVHjw&s" alt="Performance Running Shoes">
+            <div class="product-info">
+                <h3>Performance Running Shoes</h3>
+                <p>Engineered for top athletes, offering excellent traction and a responsive feel for faster performance.</p>
+                <div class="price">$129.99</div>
+                <a href="./buynow.html"><button class="button">Buy Now</button></a>
+                <a href="./add to cart.html" class="btn btn-secondary">Add to Cart</a> 
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Running Shoes Collection. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
